@@ -431,7 +431,7 @@ export default function LiquidEther({
       vec2 d = (uv - uPointerUv) * vec2(1.0, uAspect);
       float cursorHalo = exp(-dot(d, d) / (2.0 * 0.036 * 0.036));
       float lenMix = clamp(lenv + cursorHalo * 1.28, 0.0, 1.0);
-      vec3 videoCol = texture2D(uRevealVideo, uv).rgb * 1.14;
+      vec3 videoCol = texture2D(uRevealVideo, uv).rgb * 1.22;
       float reelW = smoothstep(0.028, 0.44, lenMix) * 0.9;
       vec3 withReel = mix(baseGrad, videoCol, reelW);
       /* Mezcla del color de humo solo con |vel| (lenv). Si usamos lenMix aquí, el halo del cursor
