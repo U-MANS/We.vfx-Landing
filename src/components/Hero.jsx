@@ -182,8 +182,8 @@ export default function Hero() {
                 />
                 <LiquidEther
                    colors={[ '#5227FF', '#FF9FFC', '#B497CF' ]}
-                   mouseForce={20}
-                   cursorSize={170}
+                   mouseForce={16}
+                   cursorSize={145}
                    isViscous
                    viscous={30}
                    iterationsViscous={32}
@@ -192,7 +192,7 @@ export default function Hero() {
                    isBounce={false}
                    autoDemo
                    autoSpeed={0.5}
-                   autoIntensity={2.2}
+                   autoIntensity={1.55}
                    takeoverDuration={0.25}
                    autoResumeDelay={3000}
                    autoRampDuration={0.6}

@@ -431,12 +431,12 @@ export default function LiquidEther({
       vec2 d = (uv - uPointerUv) * vec2(1.0, uAspect);
       float cursorHalo = exp(-dot(d, d) / (2.0 * 0.036 * 0.036));
       float lenMix = clamp(lenv + cursorHalo * 1.28, 0.0, 1.0);
-      vec3 videoCol = texture2D(uRevealVideo, uv).rgb;
+      vec3 videoCol = texture2D(uRevealVideo, uv).rgb * 1.14;
       float reelW = smoothstep(0.028, 0.44, lenMix) * 0.9;
       vec3 withReel = mix(baseGrad, videoCol, reelW);
       /* Mezcla del color de humo solo con |vel| (lenv). Si usamos lenMix aquí, el halo del cursor
          sube lenMix pero c sigue muestreado con lenv≈0 → casi solo el primer color de la paleta (#5227FF, azul). */
-      vec3 outRGB = mix(withReel, c, min(lenv * 1.06, 0.88));
+      vec3 outRGB = mix(withReel, c, min(lenv * 0.82, 0.62));
       float outA = mix(bgColor.a, 1.0, max(lenv, reelW * 0.7));
       gl_FragColor = vec4(outRGB, outA);
     }
