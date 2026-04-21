@@ -212,7 +212,6 @@ export default function Hero() {
                 </div>
                 <h1 className="hero-title">
                     <span className="title-line">Efectos Visuales</span>
-                    <span className="title-line accent">de Vanguardia</span>
                 </h1>
                 <p className="hero-subtitle">
                     Equipo de profesionales con dilatada experiencia en producción,
